@@ -18,5 +18,24 @@
         "react"
     ],
     "rules": {
-    }
+      "indent": [
+          "error",
+          "tab"
+      ],
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "quotes": [
+          "error",
+          "single"
+      ],
+      "semi": [
+          "error",
+          "never"
+      ],
+      "react/prop-types": 0,
+      "no-trailing-spaces": "error",
+      "no-tabs": 0
+  }
 }
