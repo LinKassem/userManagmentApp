@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useToasts } from 'react-toast-notifications'
 import { useHistory } from 'react-router-dom'
 import { validateFormValues } from './validateFormValues'
+import MapField from './../../CommonComponents/MapField'
 
 const createUser = (values) => {
 	const result = axios.post(
@@ -53,7 +54,8 @@ const AddUserForm = ({ className }) => {
 					password: '',
 					confirmPassword: '',
 					avatar: '',
-					address: ''
+					address: '',
+					addressPin: null
 				}}
 				onSubmit={handleSubmit}
 				render={({ handleReset }) => (
@@ -75,8 +77,8 @@ const AddUserForm = ({ className }) => {
 						</Form.Group>
 						<Form.Group widths="2">
 							<Input label="Address" name="address" />
-							{/* <Input label="Street Address Pin" name="addressPin" /> */}
 						</Form.Group>
+						<MapField label="Address Pin Location" name="addressPin"/>
 						<FileUpload label="Upload Avatar" name="avatar" />
 
 						<div className="submit-button-container">

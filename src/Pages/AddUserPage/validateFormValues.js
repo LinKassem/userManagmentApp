@@ -48,6 +48,11 @@ export const validateFormValues = (values, formikApi) => {
 		errors++
 	}
 
+	if (!values.addressPin) {
+		formikApi.setFieldError('addressPin', 'Address Pin is required')
+		errors++
+	}
+
 	if (!values.avatar) {
 		formikApi.setFieldError('avatar', 'Avatar is required')
 		errors++
