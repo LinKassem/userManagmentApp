@@ -7,7 +7,6 @@ import Map from './../CommonComponents/Map'
 const MapField = ({ className, name, label, fieldProps = {}, ...props }) => {
 	const onMapClick = (locationObject, form) => {
 		form.setFieldValue(name, locationObject, true)
-		console.log(form)
 	}
 
 	return (

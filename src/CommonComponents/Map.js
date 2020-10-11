@@ -22,13 +22,13 @@ const Map = ({ center = { lat: 26.8206, lng: 30.8025 }, zoom = 5, onClick }) => 
 		onClick({ lat, lng })
 	}
 	return (
-	// Important! Always set the container height explicitly
 		<div style={{ height: '200px', width: '100%' }}>
 			<GoogleMapReact
 				bootstrapURLKeys={{ key: 'AIzaSyDOPob-Y_ubilvNv0Z7MoHdVogySEQ7mMg' }}
 				defaultCenter={center}
 				defaultZoom={zoom}
 				onClick={handleClick}
+				yesIWantToUseGoogleMapApiInternals
 				onGoogleApiLoaded={({ map, maps }) => {
 					setMaps(maps)
 					setMap(map)

@@ -58,7 +58,8 @@ const AddUserForm = ({ className }) => {
 					addressPin: null
 				}}
 				onSubmit={handleSubmit}
-				render={({ handleReset }) => (
+			>
+				{({ handleReset }) => (
 					<Form.Children>
 
 						<Form.Group widths="2">
@@ -86,7 +87,7 @@ const AddUserForm = ({ className }) => {
 						</div>
 					</Form.Children>
 				)}
-			/>
+			</Form>
 		</div>
 	)
 }
