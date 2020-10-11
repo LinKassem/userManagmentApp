@@ -4,22 +4,25 @@ import { Global } from '@emotion/core'
 import globalStyle from './Styles/GlobalStyles'
 import UsersListPage from './Pages/UsersListPage/UsersListPage'
 import AddUserPage from './Pages/AddUserPage/AddUserPage'
+import { ToastProvider } from 'react-toast-notifications'
 import 'semantic-ui-css/semantic.min.css'
 
 const App = () => {
 	return (
 		<>
 			<Global styles={globalStyle} />
-			<Router>
-				<Switch>
-					<Route path="/addUser">
-						<AddUserPage />
-					</Route>
-					<Route path="/">
-						<UsersListPage />
-					</Route>
-				</Switch>
-			</Router>
+			<ToastProvider>
+				<Router>
+					<Switch>
+						<Route path="/addUser">
+							<AddUserPage />
+						</Route>
+						<Route path="/">
+							<UsersListPage />
+						</Route>
+					</Switch>
+				</Router>
+			</ToastProvider>
 		</>
 	)
 }
